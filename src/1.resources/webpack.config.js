@@ -5,24 +5,11 @@ const json5 = require('json5');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  devtool: 'inline-source-map', // 开发环境开启后可直接定位代码错误警告源文件代码位置
-  devServer: {
-    static: path.join(__dirname, 'public'), // webpack-dev-server 在编译之后不会写入任何输出文件，而是将 bundle 文件保留在内存中，然后将它们作为可访问资源部署在 server 中，就像是挂载在 server 根路径上的真实文件一样
-  },
-  optimization: {
-    runtimeChunk: 'single',
-  },
-  entry: {
-    output:'./src/输出管理/index.js',
-    print:'./src/输出管理/print.js',
-    assets: './src/资源管理/index.js'
-  },
+  entry: './src/1.resources/index.js',
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // 每次构建清除原打包文件
-    publicPath: '/',
+    clean: true, // 每次构建清理 dist
   },
   module: {
     rules: [
@@ -74,7 +61,7 @@ module.exports = {
   },
   plugins:[
     new HtmlWebpackPlugin({ // 重新生成 html 文件，动态引入等
-      title: 'Development',
+      title: '管理资源',
     })
   ]
 };

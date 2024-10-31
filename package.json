@@ -5,16 +5,28 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build:resources": "webpack --config ./src/1.resources/webpack.config.js",
+    "build:output": "webpack --config ./src/2.output/webpack.config.js",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "csv-loader": "^3.0.5",
+    "express": "^4.21.1",
+    "html-webpack-plugin": "^5.6.3",
+    "json5": "^2.2.3",
     "style-loader": "^4.0.0",
+    "toml": "^3.0.0",
     "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-middleware": "^7.4.2",
+    "webpack-dev-server": "^5.1.0",
+    "xml-loader": "^1.2.1",
+    "yamljs": "^0.3.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"
