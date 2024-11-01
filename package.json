@@ -5,10 +5,12 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:resources": "webpack --config ./src/1.resources/webpack.config.js",
-    "build:output": "webpack --config ./src/2.output/webpack.config.js",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "b:1": "webpack --config ./src/1.resources/webpack.config.js",
+    "b:2": "webpack --config ./src/2.output/webpack.config.js",
+    "b:3": "webpack serve --config ./src/3.devServer/webpack.config.js",
+    "server": "node ./src/3.devServer/server.js",
+    "b:4": "webpack --config ./src/4.splitChunks/webpack.config.js",
+    "b:5": "webpack --config ./src/5.cache/webpack.config.js"
   },
   "keywords": [],
   "author": "",
