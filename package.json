@@ -10,7 +10,8 @@
     "b:3": "webpack serve --config ./src/3.devServer/webpack.config.js",
     "server": "node ./src/3.devServer/server.js",
     "b:4": "webpack --config ./src/4.splitChunks/webpack.config.js",
-    "b:5": "webpack --config ./src/5.cache/webpack.config.js"
+    "b:5": "webpack --config ./src/5.cache/webpack.config.js",
+    "b:7": "webpack --env goal=local --env production --config ./src/7.env/webpack.config.js"
   },
   "keywords": [],
   "author": "",
